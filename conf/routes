@@ -1,0 +1,10 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /overview             controllers.Listings.overview
+POST        /save                 controllers.Listings.save
+GET         /listings/:listingId  controllers.Listings.byId(listingId: IdParam[ListingIdTag])
+DELETE      /listings/:listingId  controllers.Listings.delete(listingId: IdParam[ListingIdTag])
+PUT         /listings/:listingId  controllers.Listings.update(listingId: IdParam[ListingIdTag])
